@@ -1,0 +1,448 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: Lato, serif;
+}
+
+:root{
+    --primary-orange:#ff8a5b;
+    --primary-light:#25c4c7;
+    --primary-dark:#20494a;
+    --color-gray:#F4F4F4
+}
+
+/******************************************** Navigation ***********/
+/*** box shadow to reveal shadowcolor under nav container*/
+.header-nav{
+    padding: 10px 0;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+    margin-bottom: 10px;
+}
+.header-nav-content-container{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+.header-nav-content-container::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.header-nav-content{
+    margin-right: 10px;
+    float: left;
+}
+
+.header-nav-content .header-nav-logo{
+    width: 80px;
+}
+
+.header-nav-content .header-nav-list .header-nav-list-item{
+    display: inline-block;
+    list-style-type: none;
+    margin-right: 15px;
+}
+
+.header-nav-content .header-nav-list{
+    text-align: center;
+}
+
+.header-nav-content .header-nav-list li a{
+    text-decoration: none;
+    color: #000;
+}
+.header-nav-content .header-nav-list li .active{
+    color: var(--primary-light);
+}
+.main-nav{
+    width: 70%;
+}
+.main-nav,
+.header-nav-cta{
+    margin-top: 20px;
+}
+
+/******************************************** Buttons ***********/
+.btn{
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 7px;
+    transition: all  0.3s;
+    color: #fff;
+}
+.btn-half{
+    border: 2px solid var(--primary-orange);
+    color: var(--primary-orange);
+}
+.btn-half:hover{
+    background-color: var(--primary-orange);
+    color: #fff;
+}
+
+.btn-orange{
+    background-color: var(--primary-orange);
+   
+}
+.btn-sky-blue{background-color: var(--primary-light);}
+/******************************************** Reusable Components ***********/
+.row{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+.row::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.row [class^="col-"]{
+    float: left;
+}
+
+.row [class^="col-"]:not(:last-child){
+    margin-right: 30px;
+}
+
+.col-1-of-2{
+    width: calc((100% - 30px) / 2 );
+}
+.col-1-of-3{
+    width: calc((100% -  (2 * 30px)) / 3 );
+}
+
+.col-1-of-4{
+    width: calc((100% -  (3 * 30px)) / 4 );
+}
+
+/******************************************** Utility Classes ***********/
+.u-center-text{
+    text-align: center;
+}
+.u-margin-bottom-sm{ margin-bottom: 40px; }
+.u-margin-bottom-md{margin-bottom: 60px;}
+
+
+/******************************************** Headings ***********/
+.heading-secondary{color: var(--primary-light);}
+
+.heading-primary{
+   font-size: 30px;
+}
+
+/******************************************** Hero Section ***********/
+.hero-container{
+    height: 100vh;
+    background-color: var(--color-gray);
+}
+.hero-contents{
+    padding: 70px 0;
+}
+.hero-left-content{
+    padding-right: 30px;
+}
+.hero-heading-sub{
+    letter-spacing: 4px;
+}
+.hero-heading-main{
+   margin: 15px 0;
+   text-transform: uppercase;
+   font-size: 50px;
+   background-image: linear-gradient(to right, var(--primary-dark), var(--primary-light));
+   background-clip: text;
+   color: transparent;
+}
+.hero-text{
+    margin-bottom: 40px;
+}
+
+.hero-circle{
+    background-image: linear-gradient(to right, var(--primary-light), var(--primary-dark));
+    height: 450px;
+    width: 450px;
+    border-radius: 100%;
+    overflow: hidden ;
+    position: relative;
+}
+.hero-circle img{
+    width: 99%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+
+
+
+
+/******************************************** Section Steps ***********/
+.section-steps{
+    padding: 100px 0;
+}
+.steps-container{
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 7px;
+    padding: 50px 80px;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.step-card{
+    border-bottom: 2px solid var(--primary-light);
+    border-radius: 5px;
+    text-align: center;
+    padding: 15px;
+}
+
+.step-circle{
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    margin: 0 auto;
+    background-color: var(--color-gray);
+    text-align: center;
+    line-height: 50px;
+}
+.step-icon{
+    color: var(--primary-light);
+    font-size: 25px;
+}
+.step-heading{
+    margin: 17px 0;
+}
+
+.step-para{
+    margin-bottom: 10px;
+}
+
+/******************************************** Section About ***********/
+.section-about{
+    background-color: var(--color-gray);
+    padding: 100px 0;
+}
+
+.about-image-box{
+    height: 500px;
+    position: relative;
+}
+.about-round,
+.about-img{
+    position: absolute;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 60px;
+}
+.about-round{
+    height: 450px;
+    width: 80%;
+    background-image: linear-gradient(to right, var(--primary-dark), var(--primary-light));
+}
+.about-img{
+    width: 80%;
+    height: 90%;
+    top: -50px;
+    left: 40px;
+    /* overflow: hidden;  */
+}
+
+.about-img img{
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 60px;
+    width: 100%;
+    height: 100%;
+  
+    object-fit: cover;
+}
+
+
+.about-text-box{
+    padding: 0 20px;
+}
+.about-para{
+    margin: 25px 0;
+}
+.about-statistics-container{
+
+}
+
+.stats-card{
+    height: 80px;
+    width: 90px;
+    padding: 15px 7px;
+    border-radius: 7px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 0 10px #ccc;
+    float: left;
+    margin-right: 20px;
+}
+.stats-heading{
+    color:var(--primary-light);
+    font-size: 25px;
+}
+.stats-title{
+    font-size: 13px;
+    font-weight: 200;
+}
+
+/******************************************** Section Top Doctors ***********/
+.section-top-doctors{
+    padding: 100px 0;
+}
+
+.doctor-card{
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    padding-bottom: 30px;
+    border-radius: 7px;
+}
+
+.doctor-image-holder{
+    /* height: 200px;
+    width: 200px;
+    border-radius: 100%;
+    overflow: hidden; */
+}
+
+.doctor-image-holder img{
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+}
+
+.doctor-info-group{
+    margin: 25px 0;
+}
+.doctor-specialization{
+    margin: 10px 0;
+    color: var(--primary-light);
+    font-weight: 600;
+}
+.doctor-star-ratings{
+    color: var(--primary-orange);
+}
+
+/******************************************** Section Testimonials ***********/
+.Testimonies-section{
+    padding: 100px 0;
+    background-color: var(--color-gray);
+}
+
+.testimonial-card{
+    background-color: #fff;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 7px;
+}
+.testimonial-card::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+.testifier-img-holder{
+    float: left;
+}
+.testifier-img-holder img{
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+}
+.testifier-sickness{
+    margin: 7px 0;
+    color: var(--primary-light);
+}
+.testifier-star-ratings{color: var(--primary-orange);}
+.testifier-info{
+    float: right;
+    width: 62%;
+    padding: 20px;
+}
+
+/******************************************** Section CTA ***********/
+.section-cta{
+    padding: 100px 0;
+}
+.cta-container{
+    max-width: 1140px;
+    margin: 0 auto;
+    height: 400px;
+    background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/doc4.jpg');
+    background-size: cover;
+    border-radius: 7px;
+    padding: 170px 50px;
+  
+}
+
+.cta-container::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.cta-text{
+    float: left;
+}
+
+.cta-text h4{
+    color: var(--primary-light);
+}
+.cta-text h3{
+    margin: 10px 0;
+    color: #fff;
+}
+.cta-text span{
+    color:#fff;
+}
+.cta-btn{
+    float: right;
+}
+
+/******************************************** Section Blog ***********/
+.section-blog{
+    padding: 100px 0;
+}
+
+.blog-card{
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 7px;
+}
+
+.blog-media{
+    overflow: hidden;
+    height: 200px;
+    border-radius: 7px;
+}
+
+.blog-text{
+    padding: 15px;
+}
+
+.blog-text span{
+    color: #887d7d;
+}
+
+.blog-text h2{
+    margin: 12px 0;
+}
+
+.blog-text p{
+    color: #887d7d;
+}
+
+.blog-text a{
+    color: var(--primary-orange);
+    display: inline-block;
+    padding: 15px 0;
+}
+
+/******************************************** Footer ***********/
+.footer{
+    background-color: #00181b;
+    padding: 100px 0;
+    height: 200px;
+}
