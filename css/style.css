@@ -442,7 +442,69 @@ html{
 
 /******************************************** Footer ***********/
 .footer{
-    background-color: #00181b;
-    padding: 100px 0;
-    height: 200px;
+    background-color: #42686d;
+    padding: 30px 0;  
+}
+.footer-conatiner{
+   max-width: 1140px;
+    margin: 0 auto;
+}
+.footer-conatiner::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+.footer-content{
+   float: left;
+}
+.footer-content img{
+    height: 100px;
+    vertical-align: middle;
+    margin-bottom: 30px;
+    
+}
+.footer-images{
+    float: left;
+    display: inline;
+    color: yellow;
+    
+}
+.footer-text{
+    float: right;
+    padding-top: 10px;
+    font-size:xx-large;
+    color: white;
+}
+    
+.main-list{
+    margin-left: 70%;
+    margin-top: -100px;  
+}
+.footer-content .footer-list .footer-list-items  {
+    float: left;
+    margin-right: 15px;
+    list-style-type: none;
+     
+}
+.footer-list-items a{
+   text-decoration: none;
+   color: white;
+}
+.footer-list{
+   list-style-type: none;
+}
+.footer-icons i{
+    padding: 20px 10px;
+    margin: 5px 9px;
+  
+}
+.footer-icons{
+    margin-left: 45%;
+    color: aqua;
+}
+.footer-resever{
+    margin-left: 34%;
+    margin-bottom: 10px;
+    color: aqua;
+    
 }
